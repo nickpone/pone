@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poon - Video Sharing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Poon</h1>
+        <button id="uploadButton">Upload Video</button>
+    </header>
+
+    <nav>
+        <button id="homeButton">Home</button>
+        <!-- Add more navigation options if needed -->
+    </nav>
+
+    <div id="videoContainer"></div>
+
+    <!-- Video Player Modal -->
+    <div id="videoPlayerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video id="videoPlayer" controls>
+                <source id="videoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2 id="videoTitleDisplay"></h2>
+            <p id="videoViewsDisplay"></p>
+            <p id="videoDescriptionDisplay"></p>
+            <div class="like-dislike">
+                <button id="likeButton">👍 <span id="likeCount">0</span></button>
+                <button id="dislikeButton">👎 <span id="dislikeCount">0</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Form Modal -->
+    <div id="uploadForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Upload Video</h2>
+            <input type="file" id="videoUpload" accept="video/mp4"><br><br>
+            <input type="text" id="videoTitle" placeholder="Video Title"><br><br>
+            <textarea id="videoDescription" placeholder="Video Description"></textarea><br><br>
+            <button id="confirmUploadButton">Upload</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
